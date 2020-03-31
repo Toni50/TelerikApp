@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TelerikApp.Portable"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+             xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+    x:Class="TelerikApp.Portable.Views.ExpensesByCategories"
+    >
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="MyViolet">#c75299</Color>
+            <Color x:Key="MyBlue">#439cd9</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Expenses by categories"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center"
+                FontSize="30"
+                TextColor="Black"
+                   />
+
+
+
+
+            <telerikGauges:RadRadialGauge x:Name="gauge"
+                                          AxisRadiusFactor="0.75"
+                                          StartAngle="90"
+                                          SweepAngle="270"
+                                          HorizontalOptions="FillAndExpand"
+                                          VerticalOptions="FillAndExpand"
+                                         
+                                          >
+
+                <telerikGauges:RadRadialGauge.Axis>
+                    <telerikGauges:GaugeLinearAxis Minimum="0"
+                                                   Maximum="50"
+                                                   Step="10"
+                                                   StrokeThickness="0"
+                                                   ShowLabels="True"
+                                                   LabelFormat="{}0 \%"
+                                                   FontSize="18"
+                                                   TextColor="Black"
+                                                   />
+                </telerikGauges:RadRadialGauge.Axis>
+                
+                <telerikGauges:RadRadialGauge.Indicators>
+
+ 
+
+                    <telerikGauges:GaugeTextIndicator Value="0"
+                                                      Text="Equipment and hardware"
+                                                      TextColor="Black"
+                                                      FontSize="18"
+                                                      HorizontalTextPlacement="Left"
+                                                      VerticalTextPlacement="Center"
+                                                      TextMargin="4"
+                                                      Position="Start"
+                                                      Offset="0" />
+                    
+                    <telerikGauges:GaugeTextIndicator Value="0"
+                                                      Text="Food and Drinks"
+                                                      TextColor="Black"
+                                                      FontSize="18"
+                                                      HorizontalTextPlacement="Left"
+                                                      VerticalTextPlacement="Center"
+                                                      TextMargin="4"
+                                                      Position="Start"
+                                                      Offset="30" />
+
+                      
+                    <telerikGauges:GaugeTextIndicator Value="0"
+                                                      Text="Shopping"
+                                                      TextColor="Black"
+                                                      FontSize="18"
+                                                      HorizontalTextPlacement="Left"
+                                                      VerticalTextPlacement="Center"
+                                                      TextMargin="4"
+                                                      Position="Start"
+                                                      Offset="60" />
+
+                    <telerikGauges:GaugeTextIndicator Value="0"
+                                                      Text="Travel"
+                                                      TextColor="Black"
+                                                      FontSize="18"
+                                                      HorizontalTextPlacement="Left"
+                                                      VerticalTextPlacement="Center"
+                                                      TextMargin="4"
+                                                      Position="Start"
+                                                      Offset="90" />
+
+                    <telerikGauges:GaugeTextIndicator Value="0"
+                                                      Text="Transportation"
+                                                      TextColor="Black"
+                                                      FontSize="18"
+                                                      HorizontalTextPlacement="Left"
+                                                      VerticalTextPlacement="Center"
+                                                      TextMargin="4"
+                                                      Position="Start"
+                                                      Offset="120" />
+
+                    
+
+
+                      
+
+
+                    <telerikGauges:GaugeBarIndicator Value="50"
+                                                     Fill="LightGray"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="0"
+                                                      />
+                    <telerikGauges:GaugeBarIndicator Value="50"
+                                                     Fill="LightGray"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="30"
+                                                      />
+                    <telerikGauges:GaugeBarIndicator Value="50"
+                                                     Fill="LightGray"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="60"
+                                                      />
+
+                    <telerikGauges:GaugeBarIndicator Value="50"
+                                                     Fill="LightGray"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="90"
+                                                      />
+                    <telerikGauges:GaugeBarIndicator Value="50"
+                                                     Fill="LightGray"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="120"
+                                                      />
+
+                    
+
+                    <telerikGauges:GaugeBarIndicator Value="40"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="0"
+                                                    >
+                        <telerikGauges:GaugeBarIndicator.GradientStops>
+                            <telerikCommon:RadGradientStop Offset="20"
+                                                           Color="{StaticResource MyBlue}" 
+                                                           />
+                            <telerikCommon:RadGradientStop Offset="40"
+                                                           Color="{StaticResource MyViolet}" />
+                        </telerikGauges:GaugeBarIndicator.GradientStops>
+                    </telerikGauges:GaugeBarIndicator>
+
+
+ 
+                     
+                    <telerikGauges:GaugeBarIndicator Value="30"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="30">
+                        <telerikGauges:GaugeBarIndicator.GradientStops>
+                            <telerikCommon:RadGradientStop Offset="15"
+                                                           Color="{StaticResource MyBlue}" 
+                                                           />
+                            <telerikCommon:RadGradientStop Offset="30"
+                                                           Color="{StaticResource MyViolet}" />
+                        </telerikGauges:GaugeBarIndicator.GradientStops>
+                    </telerikGauges:GaugeBarIndicator>
+
+
+
+                    <telerikGauges:GaugeBarIndicator Value="20"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="60">
+                        <telerikGauges:GaugeBarIndicator.GradientStops>
+                            <telerikCommon:RadGradientStop Offset="10"
+                                                           Color="{StaticResource MyBlue}" 
+                                                           />
+                            <telerikCommon:RadGradientStop Offset="20"
+                                                           Color="{StaticResource MyViolet}" />
+                        </telerikGauges:GaugeBarIndicator.GradientStops>
+                    </telerikGauges:GaugeBarIndicator>
+
+
+
+                    <telerikGauges:GaugeBarIndicator Value="20"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="90">
+                        <telerikGauges:GaugeBarIndicator.GradientStops>
+                            <telerikCommon:RadGradientStop Offset="10"
+                                                           Color="{StaticResource MyBlue}" 
+                                                           />
+                            <telerikCommon:RadGradientStop Offset="20"
+                                                           Color="{StaticResource MyViolet}" />
+                        </telerikGauges:GaugeBarIndicator.GradientStops>
+                    </telerikGauges:GaugeBarIndicator>
+
+
+
+
+                    <telerikGauges:GaugeBarIndicator Value="20"
+                                                     StartCap="Oval"
+                                                     EndCap="Oval"
+                                                     Offset="120">
+                        <telerikGauges:GaugeBarIndicator.GradientStops>
+                            <telerikCommon:RadGradientStop Offset="10"
+                                                           Color="{StaticResource MyBlue}" 
+                                                           />
+                            <telerikCommon:RadGradientStop Offset="20"
+                                                           Color="{StaticResource MyViolet}" />
+                        </telerikGauges:GaugeBarIndicator.GradientStops>
+                    </telerikGauges:GaugeBarIndicator>
+
+
+
+                    <!--
+                    <telerikGauges:GaugeTextIndicator 
+                                  Text="AA"
+                                  TextColor="{StaticResource MyBlue}"
+                                  FontSize="20"
+                                  Offset="20"
+                                  HorizontalTextPlacement="Left"
+                                  Value="45" />
+                    -->
+
+
+
+
+                </telerikGauges:RadRadialGauge.Indicators>
+            </telerikGauges:RadRadialGauge>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+
+
+    
+ 

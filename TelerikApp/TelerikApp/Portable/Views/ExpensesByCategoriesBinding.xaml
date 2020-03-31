@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TelerikApp.Portable"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+             xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+   x:Class="TelerikApp.Portable.Views.ExpensesByCategoriesBinding"
+    
+    >
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="MyViolet">#c75299</Color>
+            <Color x:Key="MyBlue">#439cd9</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Expenses By Categories Binding"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center"
+                FontSize="30"
+                TextColor="Black"
+                   />
+
+
+
+
+            <telerikGauges:RadRadialGauge x:Name="gauge"
+                                          AxisRadiusFactor="0.75"
+                                          StartAngle="90"
+                                          SweepAngle="270"
+                                          HorizontalOptions="FillAndExpand"
+                                          VerticalOptions="FillAndExpand"
+                                        
+                                          
+                                          xmlns:viewModels="clr-namespace:TelerikApp.Portable.ViewModels"
+                                          viewModels:ViewModelBindableProperty.AutoWireViewModel="{Binding indicators}"
+                                          
+                                          >
+                
+
+                <telerikGauges:RadRadialGauge.Axis>
+                    <telerikGauges:GaugeLinearAxis Minimum="0"
+                                                   Maximum="50"
+                                                   Step="10"
+                                                   StrokeThickness="0"
+                                                   ShowLabels="True"
+                                                   LabelFormat="{}0 \%"
+                                                   FontSize="18"
+                                                   TextColor="Black"
+                                                   />
+                </telerikGauges:RadRadialGauge.Axis>
+
+               
+            </telerikGauges:RadRadialGauge>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+

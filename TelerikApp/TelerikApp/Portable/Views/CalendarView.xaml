@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TelerikApp.Portable"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+             xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"    
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+        
+             xmlns:converters="clr-namespace:TelerikApp.Portable.Converter"
+             x:Class="TelerikApp.Portable.Views.CalendarView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ConfigurableBoolConverter x:Key="BackgroundImageConverter"
+                                              x:TypeArguments="x:String"
+                                              TrueResult="onIcon.png"
+                                              FalseResult="offIcon.png"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CalendarView" 
+                   FontSize="20" 
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   />
+
+
+
+            <StackLayout Orientation="Horizontal">
+                <telerikPrimitives:RadCheckBox
+                    CheckedColor="Blue"
+                    BackgroundColor="Red"
+                    CheckedSymbolColor="Black"
+                    IsChecked="True"
+                    />
+                <Label Text="Check Me" VerticalOptions="Center"/>
+            </StackLayout>
+            <telerikInput:RadButton 
+                     Command="{Binding ToggleButtonStateCommand}" 
+                     BackgroundImage="{Binding IsOn, Converter={StaticResource BackgroundImageConverter}}" 
+                     HeightRequest="30"
+                     WidthRequest="66"
+                     BorderThickness="0"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     BorderColor="Transparent"/>
+
+
+
+            <telerikInput:RadCalendar x:Name="calendar"
+                                          WidthRequest="350"
+                                          WeekNumbersDisplayMode="Hide"
+                                          SelectionMode="Range" 
+                                          SelectionChanged="calendar_SelectionChanged"
+                                          DayNamesDisplayMode="Show">
+                 
+            </telerikInput:RadCalendar>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:TelerikApp.Portable.Views"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+             xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+             x:Class="TelerikApp.Portable.MainPage"
+       >
+
+
+
+
+    <FlyoutItem Title="Expenses By Categories Binding" Icon="tab_about.png" Route="r10">
+        <ShellContent Route="r10" 
+                      ContentTemplate="{DataTemplate views:ExpensesByCategoriesBinding}" 
+                      />
+    </FlyoutItem>
+    
+    
+    <FlyoutItem Title="Charts" Icon="tab_about.png" Route="r9">
+        <ShellContent Route="r9" 
+                      ContentTemplate="{DataTemplate views:MyCharts}" 
+                      />
+    </FlyoutItem>
+    
+    
+
+    <FlyoutItem Title="Calendar View" Icon="tab_about.png" Route="r8">
+        <ShellContent Route="r8" 
+                      ContentTemplate="{DataTemplate views:CalendarView}" 
+                      />
+    </FlyoutItem>
+    
+
+    <FlyoutItem Title="Expenses By Categories Vertical" Icon="tab_about.png" Route="r7">
+        <ShellContent Route="r7" 
+                      ContentTemplate="{DataTemplate views:ExpensesByCategoriesVertical}" 
+                      />
+    </FlyoutItem>
+    
+    
+    <FlyoutItem Title="Expenses By Categories" Icon="tab_about.png" Route="r5">
+        <ShellContent Route="r5" 
+                      ContentTemplate="{DataTemplate views:ExpensesByCategories}" 
+                      />
+    </FlyoutItem>
+
+    <FlyoutItem Title="ImageQuality" Icon="tab_about.png" Route="r2">
+        <ShellContent Route="r2" 
+                      ContentTemplate="{DataTemplate views:ImageQualityView}" 
+                      />
+    </FlyoutItem>
+    
+     
+    <FlyoutItem Title="Indicator" Icon="tab_about.png" Route="r3">
+        <ShellContent Route="r3" 
+                      ContentTemplate="{DataTemplate views:MyIndicator}" 
+                      />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="CardsView" Icon="tab_about.png" Route="r1">
+        <ShellContent Route="r1" 
+                      ContentTemplate="{DataTemplate views:CardsView}" 
+                      />
+    </FlyoutItem>
+
+     
+
+</Shell>

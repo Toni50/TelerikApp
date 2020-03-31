@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TelerikApp.Portable"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+             xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
+             xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
+             xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
+             xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
+    xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.Common;assembly=Telerik.XamarinForms.Common"
+   x:Class="TelerikApp.Portable.Views.MyIndicator" 
+    >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Indicator"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center"
+                FontSize="30"
+                TextColor="Black"
+                   />
+
+
+            
+
+
+            <telerikGauges:RadRadialGauge 
+                x:Name="gauge"
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand"
+                SweepAngle="270" 
+                >
+                <telerikGauges:RadRadialGauge.Axis >
+                    <telerikGauges:GaugeLinearAxis 
+                       ShowLabels="False"
+                        StrokeThickness="0"
+                        Minimum="0"
+                         Maximum="100"
+                         Step="10" />
+                </telerikGauges:RadRadialGauge.Axis>
+
+                <telerikGauges:RadRadialGauge.Indicators>
+
+
+                    <telerikGauges:GaugeNeedleIndicator 
+                        Value="60"
+                         
+                        />
+                </telerikGauges:RadRadialGauge.Indicators>
+
+                <telerikGauges:RadRadialGauge.Ranges>
+                    <telerikGauges:GaugeRangesDefinition>
+                        <telerikGauges:GaugeRange Color="Green"
+                                      From="0"
+                                      To="20" />
+                        <telerikGauges:GaugeGradientRange From="20" To="40">
+                            <telerikCommon:RadGradientStop Offset="30" Color="Yellow"  />
+                            <telerikCommon:RadGradientStop Offset="40" Color="Red" />
+                        </telerikGauges:GaugeGradientRange>
+
+                        <telerikGauges:GaugeRange Color="Blue"
+                                      From="40"
+                                      To="100" />
+
+                        <telerikGauges:GaugeRange Color="Red"
+                                      From="50"
+                                      To="90" />
+
+                    </telerikGauges:GaugeRangesDefinition>
+                </telerikGauges:RadRadialGauge.Ranges>
+            </telerikGauges:RadRadialGauge>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+    
+ 
+    
